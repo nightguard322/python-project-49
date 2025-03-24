@@ -1,9 +1,9 @@
 from brain_games import utils
+from brain_games.games import even
 
 def main():
     utils.greet()
-    username = utils.get_username()
-    utils.show_message(f"Hello, {username}")
+    even.start()
 
 if __name__ == "__main__":
     main()
