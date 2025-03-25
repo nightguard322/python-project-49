@@ -1,9 +1,9 @@
 from brain_games import utils
-from brain_games.games import gcd
+from brain_games.games import progression
 
 def main():
     utils.greet()
-    gcd.start()
+    progression.start()
 
 if __name__ == "__main__":
     main()

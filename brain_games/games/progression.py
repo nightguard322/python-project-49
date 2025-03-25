@@ -3,22 +3,29 @@ from brain_games.games.engine import launch
 import random
 
 def start() -> None:
-
     expressions = generate_expressions()
     config = {
-        'message': "Answer \"yes\" if the number is even, otherwise answer \"no\".",
+        'message': "What number is missing in the progression?.",
         'expressions': expressions
     }
     launch(config)
 
 
-def get_answer(result: bool) -> str:
-    return 'yes' if result else 'no'
-
 def generate_expressions() -> list:
-    diff = random.randint(1, 5)
+    progressions = []
+    for _ in range(3):
+        progression = generate_progression()
+        answer = random.choice(progression)
+        answer_index = progression.index(answer)
+        progression[answer_index] = '..'
+        progressions.append(
+            (progression, answer)
+        )
+    return progressions
+
+
+def generate_progression() -> list:
+    diff = random.randint(2, 5)
     length = random.randint(5, 10)
-    progression = [num + diff for num in range(length)]
-    answer = random.choice(progression)
-    progression.remove(answer)
-    return progression
+    start = random.randint(1, 10)
+    return [start + (num - 1) * diff for num in range(1, length)]

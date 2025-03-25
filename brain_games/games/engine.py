@@ -7,7 +7,6 @@ def launch(config: dict) -> None:
     utils.show_message(
         config['message']
     )
-    print(config['expressions'])
     for question, answer in config['expressions']:
         user_answer = utils.prompt_message((f"Question: {question}\n"))
         
