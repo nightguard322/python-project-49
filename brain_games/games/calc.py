@@ -1,4 +1,3 @@
-from brain_games import utils
 from brain_games.games.engine import launch
 import random
 

@@ -1,4 +1,3 @@
-from brain_games import utils
 from brain_games.games.engine import launch
 import random
 
@@ -23,7 +22,7 @@ def generate_expressions() -> list:
 
 def calculate(num: int) -> bool:
     if num < 2:
-        return false
+        return False
     for div in range(2, int(num ** 0.5) + 1): #79
         if num % div == 0:
             return False
