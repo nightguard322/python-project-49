@@ -15,7 +15,8 @@ def get_answer(result: bool) -> str:
     return 'yes' if result else 'no'
 
 def get_action() -> str:
-    actions = ['+', '-', '*', '/']
+    # actions = ['+', '-', '*', '/']
+    actions = ['+', '-']
     return random.choice(actions)
 
 def generate_expressions() -> list:
