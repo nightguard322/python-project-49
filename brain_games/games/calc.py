@@ -43,7 +43,7 @@ def generate_expressions() -> list:
 
 def calculate(num1: int, num2: int, action: str) -> int:
 
-    match(action):
+    match (action):
         case '+':
             return num1 + num2
         case '-':

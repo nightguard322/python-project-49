@@ -6,5 +6,6 @@ def main():
     utils.greet()
     progression.start()
 
+
 if __name__ == "__main__":
     main()

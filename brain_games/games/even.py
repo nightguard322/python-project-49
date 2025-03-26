@@ -6,7 +6,10 @@ def start() -> None:
 
     expressions = generate_expressions()
     config = {
-        'message': "Answer \"yes\" if the number is even, otherwise answer \"no\".",
+        'message': (
+            "Answer \"yes\" if the number is even"
+            ", otherwise answer \"no\"."
+        ),
         'expressions': expressions
     }
     launch(config)
