@@ -1,6 +1,7 @@
 from brain_games.games.engine import launch
 import random
 
+
 def start() -> None:
 
     expressions = generate_expressions()
@@ -9,6 +10,7 @@ def start() -> None:
         'expressions': expressions
     }
     launch(config)
+
 
 def generate_expressions() -> list:
     expressions = []
@@ -21,6 +23,7 @@ def generate_expressions() -> list:
         
     return expressions
 
+
 def calculate(num1: int, num2: int) -> int:
     if num2 == 0:
         return 0
@@ -28,6 +31,7 @@ def calculate(num1: int, num2: int) -> int:
     while num1 % num2 != 0:
         num1, num2 = num2, num1 % num2
     return num2
+
 
 def generate_number_pairs() -> list:
     first_numbers_list = [random.randint(1, 100) for _ in range(3)]

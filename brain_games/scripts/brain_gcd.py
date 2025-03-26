@@ -1,6 +1,7 @@
 from brain_games import utils
 from brain_games.games import gcd
 
+
 def main():
     utils.greet()
     gcd.start()

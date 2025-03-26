@@ -1,8 +1,8 @@
 from brain_games.games.engine import launch
 import random
 
-def start() -> None:
 
+def start() -> None:
     expressions = generate_expressions()
     config = {
         'message': "Answer \"yes\" if given number is prime. Otherwise answer \"no\".",
@@ -19,6 +19,7 @@ def generate_expressions() -> list:
     questions = random.sample(range(2, 100), 3)
     answers = [get_answer(calculate(question)) for question in questions]
     return zip(questions, answers)
+
 
 def calculate(num: int) -> bool:
     if num < 2:

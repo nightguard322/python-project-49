@@ -1,6 +1,7 @@
 from brain_games.games.engine import launch
 import random
 
+
 def start() -> None:
     expressions = generate_expressions()
     config = {

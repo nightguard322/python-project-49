@@ -1,5 +1,6 @@
 from brain_games import utils
 
+
 def main():
     utils.greet()
     username = utils.get_username()

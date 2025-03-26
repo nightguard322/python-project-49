@@ -1,6 +1,7 @@
 from brain_games.games.engine import launch
 import random
 
+
 def start() -> None:
 
     expressions = generate_expressions()
@@ -13,6 +14,7 @@ def start() -> None:
 
 def get_answer(result: bool) -> str:
     return 'yes' if result else 'no'
+
 
 def generate_expressions() -> list:
     questions = random.sample(range(1, 100), 3)

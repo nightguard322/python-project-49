@@ -1,6 +1,7 @@
 from brain_games.games.engine import launch
 import random
 
+
 def start() -> None:
 
     expressions = generate_expressions()
@@ -14,10 +15,12 @@ def start() -> None:
 def get_answer(result: bool) -> str:
     return 'yes' if result else 'no'
 
+
 def get_action() -> str:
     # actions = ['+', '-', '*', '/']
     actions = ['+', '-']
     return random.choice(actions)
+
 
 def generate_expressions() -> list:
     expressions = []
@@ -36,6 +39,7 @@ def generate_expressions() -> list:
         )
         
     return expressions
+
 
 def calculate(num1: int, num2: int, action: str) -> int:
 
