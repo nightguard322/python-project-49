@@ -17,8 +17,9 @@ def generate_expressions() -> list:
         answer = random.choice(progression)
         answer_index = progression.index(answer)
         progression[answer_index] = '..'
+
         progressions.append(
-            (progression, answer)
+            (' '.join(progression), answer)
         )
     return progressions
 
@@ -27,4 +28,4 @@ def generate_progression() -> list:
     diff = random.randint(2, 5)
     length = random.randint(5, 10)
     start = random.randint(1, 10)
-    return [start + (num - 1) * diff for num in range(1, length)]
+    return [str(start + (num - 1) * diff) for num in range(1, length)]
