@@ -15,7 +15,8 @@ def launch(config: dict) -> None:
         else:
             utils.show_message(
                 (
-                    f"{user_answer} is wrong answer ;(. Correct answer was {answer}.\n"
+                    f"{user_answer} is wrong answer ;(. "
+                    f"Correct answer was {answer}.\n"
                     f"Let's try again, {username}!"
                 )
             )
